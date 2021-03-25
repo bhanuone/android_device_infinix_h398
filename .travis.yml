@@ -5,11 +5,11 @@ before_install:
   - docker pull surendrajat/twrp-builder:latest
 before_script:
   - cd $HOME && mkdir twrp
-  - wget -q https://github.com/TwrpBuilder/twrp-sources/releases/download/omni_twrp-5.1.1-cleaned/omni_twrp-5.1.1_cleaned.tar.xz
-    -O $HOME/twrp.tar.xz
-  - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
+  - wget -q https://github.com/TwrpBuilderTests/android_device_infinix_h398/releases/download/TWRP-3.2.3-TwrpBuilder-2018-10-24_17-35/TWRP-3.2.3-TwrpBuilder-h398-2018-10-24_17-35.tar
+    -O $HOME/twrp.tar
+  - tar -xf twrp.tar --directory $HOME/twrp/ && rm twrp.tar
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_infinix_h398.git device/infinix/h398
+  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilderTests/android_device_infinix_h398.git device/infinix/h398
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery --depth=1
   - |
