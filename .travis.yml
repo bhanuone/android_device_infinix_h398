@@ -30,7 +30,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: TwrpBuilder/android_device_infinix_h398
+    repo: bhanuone/android_device_infinix_h398
     branch: master
 branches:
   except:
